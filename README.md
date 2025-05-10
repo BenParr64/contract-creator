@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Contract Creator
+
+A web application for generating customizable tenancy agreements. This tool helps landlords and property managers create professional-looking contracts quickly and efficiently.
+
+## ⚠️ Important Disclaimer
+
+**This application is provided for educational and demonstration purposes only. The contract templates included are examples and should not be used as legal documents without proper review by a qualified legal professional.**
+
+- The author is not a legal professional
+- The templates provided are examples only
+- Users should consult with qualified legal professionals before using any generated contracts
+- The application does not provide legal advice
+- Users are responsible for ensuring their contracts comply with local laws and regulations
+
+## Features
+
+- Interactive form for contract details
+- PDF generation
+- Customizable contract templates
+- Modern, clean user interface
+- Responsive design
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- CSS Modules
+- PDF Generation
 
 ## Getting Started
 
-First, run the development server:
-
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/contract-creator.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+cd contract-creator
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Fill out the contract details form
+2. Review the generated contract
+3. Download as PDF
+4. Edit details if needed
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Support
+
+For support, please open an issue in the GitHub repository.
