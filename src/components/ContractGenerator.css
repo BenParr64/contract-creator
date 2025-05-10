@@ -1,0 +1,72 @@
+.contract-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contract-header h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.contract-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #1f2937;
+}
+
+.contract-section {
+  margin-bottom: 2rem;
+}
+
+.contract-section h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.contract-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contract-text {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.contract-text strong {
+  font-weight: 600;
+}
+
+.contract-text.italic {
+  font-style: italic;
+}
+
+.contract-signatures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.signature-line {
+  border-top: 1px solid #9ca3af;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.signature-date {
+  margin-top: 0.5rem;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.contract-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

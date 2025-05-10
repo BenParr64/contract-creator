@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import './ContractForm.css';
 
 interface ContractData {
   tenantName: string;
@@ -44,12 +45,12 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md">
-      <h1 className="text-2xl font-bold mb-6 text-gray-800">Tenancy Contract Details</h1>
+    <form onSubmit={handleSubmit} className="contract-form">
+      <h1>Tenancy Contract Details</h1>
       
-      <div className="space-y-6">
-        <div>
-          <label htmlFor="tenantName" className="block text-sm font-medium text-gray-700">
+      <div>
+        <div className="form-group">
+          <label htmlFor="tenantName">
             Tenant&apos;s Full Name
           </label>
           <input
@@ -59,12 +60,11 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
             value={formData.tenantName}
             onChange={handleChange}
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
           />
         </div>
 
-        <div>
-          <label htmlFor="startDate" className="block text-sm font-medium text-gray-700">
+        <div className="form-group">
+          <label htmlFor="startDate">
             Start Date
           </label>
           <input
@@ -74,12 +74,11 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
             value={formData.startDate}
             onChange={handleChange}
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
           />
         </div>
 
-        <div>
-          <label htmlFor="rentalAmount" className="block text-sm font-medium text-gray-700">
+        <div className="form-group">
+          <label htmlFor="rentalAmount">
             Rental Amount (£)
           </label>
           <input
@@ -91,12 +90,11 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
             required
             min="0"
             step="0.01"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
           />
         </div>
 
-        <div>
-          <label htmlFor="guarantorName" className="block text-sm font-medium text-gray-700">
+        <div className="form-group">
+          <label htmlFor="guarantorName">
             Guarantor&apos;s Full Name
           </label>
           <input
@@ -106,12 +104,11 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
             value={formData.guarantorName}
             onChange={handleChange}
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
           />
         </div>
 
-        <div>
-          <label htmlFor="guarantorAddress" className="block text-sm font-medium text-gray-700">
+        <div className="form-group">
+          <label htmlFor="guarantorAddress">
             Guarantor&apos;s Address
           </label>
           <input
@@ -121,12 +118,11 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
             value={formData.guarantorAddress}
             onChange={handleChange}
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
           />
         </div>
 
-        <div>
-          <label htmlFor="propertyAddress" className="block text-sm font-medium text-gray-700">
+        <div className="form-group">
+          <label htmlFor="propertyAddress">
             Property Address
           </label>
           <input
@@ -136,12 +132,11 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
             value={formData.propertyAddress}
             onChange={handleChange}
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
           />
         </div>
 
-        <div>
-          <label htmlFor="roomNumber" className="block text-sm font-medium text-gray-700">
+        <div className="form-group">
+          <label htmlFor="roomNumber">
             Room Number
           </label>
           <input
@@ -151,12 +146,11 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
             value={formData.roomNumber}
             onChange={handleChange}
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
           />
         </div>
 
-        <div>
-          <label htmlFor="depositAmount" className="block text-sm font-medium text-gray-700">
+        <div className="form-group">
+          <label htmlFor="depositAmount">
             Deposit Amount (£)
           </label>
           <input
@@ -168,14 +162,13 @@ export function ContractForm({ onSubmit, initialData }: ContractFormProps) {
             required
             min="0"
             step="0.01"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-4"
           />
         </div>
 
-        <div className="flex justify-end">
+        <div className="form-actions">
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            className="submit-button"
           >
             Generate Contract
           </button>

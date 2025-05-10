@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ContractForm } from '@/components/ContractForm';
 import { ContractGenerator } from '@/components/ContractGenerator';
 import { usePDF } from 'react-to-pdf';
+import './page.css';
 
 interface ContractData {
   tenantName: string;
@@ -20,8 +21,13 @@ export default function Home() {
   const [contractData, setContractData] = useState<ContractData | null>(null);
   const { toPDF, targetRef } = usePDF({
     filename: contractData ? `tenancy-agreement-${contractData.tenantName}.pdf` : 'tenancy-agreement.pdf',
-    page: { margin: 20 },
-    
+    page: {
+      format: 'a4',
+      orientation: 'portrait',
+      margin: 0,
+    },
+    method: 'save',
+    resolution: 2, // Higher resolution for better quality
   });
 
   const handleFormSubmit = (data: ContractData) => {
@@ -39,21 +45,21 @@ export default function Home() {
           <ContractForm onSubmit={handleFormSubmit} initialData={contractData} />
         ) : (
           <div className="space-y-6">
-            <div className="flex justify-end space-x-4">
+            <div className="action-buttons">
               <button
                 onClick={handleEdit}
-                className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
+                className="action-button edit"
               >
                 Edit Details
               </button>
               <button
                 onClick={() => toPDF()}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                className="action-button download"
               >
                 Download PDF
               </button>
             </div>
-            <div ref={targetRef}>
+            <div ref={targetRef} className="pdf-container">
               <ContractGenerator data={contractData} />
             </div>
           </div>
