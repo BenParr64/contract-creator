@@ -18,6 +18,7 @@
 
 .contract-section {
   margin-bottom: 2rem;
+  page-break-inside: avoid;
 }
 
 .contract-section h3 {
@@ -25,18 +26,24 @@
   font-weight: 700;
   margin-bottom: 1rem;
   color: #1f2937;
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 .contract-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  page-break-inside: avoid;
 }
 
 .contract-text {
   font-size: 0.875rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #374151;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  overflow-wrap: break-word;
 }
 
 .contract-text strong {
@@ -49,8 +56,10 @@
 
 .contract-signatures {
   display: grid;
-  grid-template-columns: 1fr 1fr;  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   margin-top: 2rem;
+  page-break-inside: avoid;
 }
 
 .signature-line {
@@ -69,4 +78,10 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.contract-list p {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  overflow-wrap: break-word;
 }

@@ -24,9 +24,9 @@ export default function Home() {
     page: {
       format: 'a4',
       orientation: 'portrait',
-      margin: 0,
+      margin: 10,
     },
-    method: 'save',
+    method: 'open',
     resolution: 2, // Higher resolution for better quality
   });
 
